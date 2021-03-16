@@ -1,0 +1,49 @@
+.single_item{
+  padding: 10px 16px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_image {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &_name {
+    font-weight: 700;
+  }
+
+  &_info {
+    width: 100%;
+    padding:  10px 24px;
+  }
+
+  &_description {
+    font-size: 15px;
+  }
+
+  &_price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+
+  &_calc {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+
+    &_amount {
+      margin-right: 20px;
+    }
+  }
+
+  &_inputs{
+    border-bottom: 1px solid lightgrey;
+  }
+}

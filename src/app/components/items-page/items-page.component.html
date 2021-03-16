@@ -1,0 +1,12 @@
+<ion-content>
+  <ion-searchbar (ionInput)="searchFilter$.next($event.target.value)" [value]=searchTerm></ion-searchbar>
+  <div *ngFor="let item of filteredData; let i = index">
+    <div class="item" (click)="navigateTo(item.sku)">
+      <img [src]="item.image" class="item_image" alt="">
+      <div class="item_info">
+        <p class="item_name">{{item.name}}</p>
+        <p class="item_description">{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

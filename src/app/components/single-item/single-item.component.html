@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{singleItem?.model}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="single_item">
+    <div class="item">
+      <img [src]="singleItem?.image" alt="" class="item_image">
+      <div class="item_info">
+        <h2 class="item_name">{{singleItem?.name}}</h2>
+        <p class="item_description">{{singleItem?.description}}</p>
+      </div>
+      <div class="item_price">
+        <ion-button color="primary" (click)="setAmountOrQuantity(100, 'amount')">100$</ion-button>
+        <ion-button color="primary" (click)="setAmountOrQuantity(10, 'amount')">10$</ion-button>
+        <ion-button color="primary" (click)="setAmountOrQuantity(2.2, 'quantity')">2.2 qty</ion-button>
+        <ion-button color="primary" (click)="setAmountOrQuantity(9, 'quantity')">9 qty</ion-button>
+      </div>
+      <div class="item_calc">
+        <div class="item_calc_amount">
+          <p class="amount">Amount, $</p>
+          <ion-input class="item_inputs" (ionInput)="changeAmountOrQuantity($event, 'amount')" [value]="amount" type="number"></ion-input>
+        </div>
+        <div class="item_calc_quantity">
+          <p class="amount">Quantity</p>
+          <ion-input class="item_inputs" (ionInput)="changeAmountOrQuantity($event, 'quantity')" [value]="quantity" type="number"></ion-input>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
